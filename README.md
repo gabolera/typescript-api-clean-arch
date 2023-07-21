@@ -18,14 +18,14 @@
 
 ---
 
-# Clean Arch for Typescript
+# The project
 
 > **Warning**
 > 🚧 Under construction
 
 <br/>
 
-This project is a model of clean architecture using typescript to follow abstract concepts, to support any lib creating adapters and being happy 😀
+This project is an start kit for api model in clean architecture using typescript to follow abstract concepts, to support any lib creating adapters and being happy 😀
 
 
 ## Folder structures
@@ -56,8 +56,3 @@ This project is a model of clean architecture using typescript to follow abstrac
 └── tsconfig.json                 # Project Typescript configuration file
 ```
 
-### Tasks (Features)
-
-- [ ] Separate `src\infra\http` for new repositories just only single adaptetr example (`@opclean/express`, `@opclean/koa`) for user can use whatever he wants
-- [ ] Add husky, lint-staged and commit-lint
-- [ ] Create tests
