@@ -1,19 +1,15 @@
-import { Controller } from '../../../presentation/controller/Controller'
-import { HttpServer } from '../../core/interface/HttpServer'
-import { Route, RouteMethod } from '../../core/Route'
-import koa from 'koa'
-import bodyParser from 'koa-bodyparser'
+import { Controller } from '../../../../../presentation/controller/Controller'
+import { HttpServer } from '../../../interface/HttpServer'
+import { Route, RouteMethod } from '../../../Route'
 import { KoaRouterAdapter } from './KoaRouterAdapter'
-import koaRouter from '@koa/router'
 
 export class KoaServerAdapter implements HttpServer {
-  private _app: koa
-  private _router: koaRouter
+  private _app: any
+  private _router: any
 
-  constructor() {
+  constructor(koa: any, KoaRouter: any) {
     this._app = new koa()
-    this._router = new koaRouter()
-    this._app.use(bodyParser())
+    this._router = new KoaRouter()
   }
 
   on(method: RouteMethod, url: string, controller: Controller): void {

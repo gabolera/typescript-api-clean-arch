@@ -1,5 +1,5 @@
-import { Controller } from '../../../presentation/controller/Controller'
-import { Request } from '../../../presentation/protocols/HttpProtocol'
+import { Controller } from '../../../../../presentation/controller/Controller'
+import { Request } from '../../../../../presentation/protocols/HttpProtocol'
 
 export class KoaRouterAdapter {
   static adapt(router: Controller) {

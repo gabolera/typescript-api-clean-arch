@@ -1,15 +1,11 @@
-import { Controller } from '../../../presentation/controller/Controller'
-import { HttpServer } from '../../core/interface/HttpServer'
-import express, { Express } from 'express'
+import { Controller } from '../../../../../presentation/controller/Controller'
+import { HttpServer } from '../../../interface/HttpServer'
 import { ExpressRouterAdapter } from './ExpressRouterAdapter'
-import { Route, RouteMethod, Router } from '../../core/Route'
+import { Route, RouteMethod, Router } from '../../../Route'
 
 export class ExpressServerAdapter implements HttpServer {
-  private app: Express
-
-  constructor() {
-    this.app = express()
-    this.app.use(express.json())
+  constructor(private app: any) {
+    this.app.use(app.json())
   }
 
   on(method: RouteMethod, url: string, controller: Controller): void {

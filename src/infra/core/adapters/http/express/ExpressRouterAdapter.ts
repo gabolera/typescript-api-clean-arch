@@ -1,6 +1,6 @@
-import { Controller } from '../../../presentation/controller/Controller'
+import { Controller } from '../../../../../presentation/controller/Controller'
 import { Request as RequestExpress, Response as ResponseExpress } from 'express'
-import { Request } from '../../../presentation/protocols/HttpProtocol'
+import { Request } from '../../../../../presentation/protocols/HttpProtocol'
 
 export class ExpressRouterAdapter {
   static adapt(router: Controller) {
