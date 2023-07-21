@@ -4,7 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "lint": "npx prettier --write ./src"
+    "lint": "npx prettier --write ./src",
+    "dev": "tsnd ./src/infra/server.ts",
+    "build": "tsc --build"
   },
   "devDependencies": {
     "@types/bcrypt": "^5.0.0",
