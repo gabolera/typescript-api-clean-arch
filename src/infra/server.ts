@@ -1,4 +1,4 @@
-import { HttpServer } from './core/HttpServer'
+import { HttpServer } from './core/interface/HttpServer'
 import { ExpressServerAdapter } from './http/express/ExpressServerAdapter'
 import { KoaServerAdapter } from './http/koa/KoaServerAdapter'
 import route from './routes/api.routes'

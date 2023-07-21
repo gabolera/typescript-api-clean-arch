@@ -1,5 +1,5 @@
 import { Controller } from '../../../presentation/controller/Controller'
-import { HttpServer } from '../../core/HttpServer'
+import { HttpServer } from '../../core/interface/HttpServer'
 import { Route, RouteMethod } from '../../core/Route'
 import koa from 'koa'
 import bodyParser from 'koa-bodyparser'

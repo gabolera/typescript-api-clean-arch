@@ -1,5 +1,5 @@
 import { Controller } from '../../../presentation/controller/Controller'
-import { HttpServer } from '../../core/HttpServer'
+import { HttpServer } from '../../core/interface/HttpServer'
 import express, { Express } from 'express'
 import { ExpressRouterAdapter } from './ExpressRouterAdapter'
 import { Route, RouteMethod, Router } from '../../core/Route'

@@ -24,16 +24,16 @@ export class Route {
   }
 }
 
-interface RouterInterface {
-  get(url: string, controller: Controller): void
-  post(url: string, controller: Controller): void
-  patch(url: string, controller: Controller): void
-  put(url: string, controller: Controller): void
-  options(url: string, controller: Controller): void
-  all(url: string, controller: Controller): void
-}
+export type RouteMethod =
+  | 'get'
+  | 'post'
+  | 'put'
+  | 'delete'
+  | 'patch'
+  | 'options'
+  | 'all'
 
-export class Router implements RouterInterface {
+export class Router {
   private _routes: Route[] = []
 
   get(url: string, controller: Controller): void {
@@ -68,12 +68,3 @@ export class Router implements RouterInterface {
     return this._routes
   }
 }
-
-export type RouteMethod =
-  | 'get'
-  | 'post'
-  | 'put'
-  | 'delete'
-  | 'patch'
-  | 'options'
-  | 'all'

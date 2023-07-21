@@ -1,5 +1,5 @@
-import { Controller } from '../../presentation/controller/Controller'
-import { RouteMethod } from './Route'
+import { Controller } from '../../../presentation/controller/Controller'
+import { RouteMethod } from '../Route'
 
 export interface HttpServer {
   on(method: RouteMethod, url: string, controller: Controller): void
