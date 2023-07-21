@@ -38,8 +38,11 @@ This project is an start kit for api model in clean architecture using typescrip
 │   │   └── use-cases             # Application use cases
 │   ├── infra                     # General components
 │   │   ├── core                  # Interface base for implementation on adapters
+│   │   │   ├── adapters          # Adapters for libs into project
+│   │   │   │   └── http          # Http libs adapters (Express, Koa, ...)
+│   │   │   ├── interfaces        # Basic interfaces of the system
+│   │   │   └── Route.ts          # Class for registering system routes
 │   │   ├── database              # Database configurations
-│   │   ├── http                  # Temporary folder for create adapter on this project
 │   │   ├── routes                # Routes
 │   │   └── server.ts             # Starting server file
 │   ├── presentation              # Communication adapter between app and infra
